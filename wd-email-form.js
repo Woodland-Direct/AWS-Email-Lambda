@@ -3,7 +3,7 @@ var ses = new AWS.SES()
 
 // Exports sendEmail functions which sends form information
 exports.sendEmail = (e, ctx, callback) => {
-  // Create search parameters
+  // Create email parameters
   var params = {
     Destination: {
       ToAddresses: [
