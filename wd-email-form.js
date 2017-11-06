@@ -31,8 +31,10 @@ exports.sendEmail = (e, ctx, callback) => {
   // Send the email
   ses.sendEmail(params, function (err, data) {
     if (err) {
+        ctx.fail(err)
         callback('Internal Error: The email could not be sent.')
     } else {
+        ctx.succeed(e)
         callback('The email was successfully sent.')
     }
   })
