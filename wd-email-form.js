@@ -34,7 +34,7 @@ exports.sendEmail = (e, ctx, callback) => {
         ctx.fail(err)
         callback('Internal Error: The email could not be sent.')
     } else {
-        ctx.succeed(e)
+        ctx.succeed(data)
         callback('The email was successfully sent.')
     }
   })
