@@ -1,0 +1,26 @@
+{
+  "name": "lambda-form-email-service",
+  "version": "1.0.0",
+  "description": "Handles email requests from forms on page.",
+  "main": "wd-email-forms.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://holodnicks@bitbucket.org/woodlanddirectinc/lambda-form-email-service.git"
+  },
+  "keywords": [
+    "email",
+    "form",
+    "aws",
+    "amazon",
+    "lambda"
+  ],
+  "author": "Stefan Holodnick",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/woodlanddirectinc/lambda-form-email-service#readme",
+  "dependencies": {
+    "aws-sdk": "^2.110.0"
+  }
+}
