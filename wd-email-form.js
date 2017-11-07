@@ -3,7 +3,7 @@ var ses = new AWS.SES()
 
 // Exports sendEmail functions which sends form information
 exports.sendEmail = (e, ctx) => {
-  var numbers = {
+  var email = {
     "Andrew Dering": "andrew.dering@woodlanddirect.com",
     "Andrew Kern": "andrew.kern@woodlanddirect.com",
     "Barry Blake": "barry.blake@woodlanddirect.com",
@@ -42,7 +42,7 @@ exports.sendEmail = (e, ctx) => {
     "default": "marty.dorda@woodlanddirect.com"
   }
 
-  var receiverEmail = (e.receiver_name) ? numbers[e.receiver_name] : e.receiver_email_address
+  var receiverEmail = (e.receiver_name) ? email[e.receiver_name] : e.receiver_email_address
 
   // Create email parameters
   var params = {
