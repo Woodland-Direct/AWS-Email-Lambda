@@ -2,7 +2,7 @@ var AWS = require('aws-sdk')
 var ses = new AWS.SES()
 
 // Exports sendEmail functions which sends form information
-exports.sendEmail = (e, ctx, callback) => {
+exports.sendEmail = (e, ctx) => {
   // Create email parameters
   var params = {
     Destination: {
@@ -32,10 +32,8 @@ exports.sendEmail = (e, ctx, callback) => {
   ses.sendEmail(params, function (err, data) {
     if (err) {
         ctx.fail(err)
-        callback('Internal Error: The email could not be sent.')
     } else {
         ctx.succeed(data)
-        callback('The email was successfully sent.')
     }
   })
 }
