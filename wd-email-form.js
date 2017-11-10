@@ -39,8 +39,9 @@ exports.sendEmail = (e, ctx) => {
     "Ryan Brady": "ryan@woodlanddirect.com",
     "Seth Kester": "seth.kester@woodlanddirect.com",
     "Thomas Kearney": "thomas.kearney@woodlanddirect.com",
-    "default": "marty.dorda@woodlanddirect.com",
-    "Stefan Holodnick": "stefan.holodnick@woodlanddirect.com"
+    "default": "marty.dorda@woodlanddirect.com"
+    //"default": "stefan.holodnick@woodlanddirect.com",    
+    //"Stefan Holodnick": "stefan.holodnick@woodlanddirect.com"
   }
 
   var receiverEmail = (e.receiver_name) ? email[e.receiver_name] : e.receiver_email_address
