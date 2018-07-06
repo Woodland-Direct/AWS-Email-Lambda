@@ -6,9 +6,7 @@ exports.sendEmail = (e, ctx) => {
   // Create email parameters
   var params = {
     Destination: {
-      ToAddresses: [
-        e.receiver_email_address
-      ]
+      ToAddresses: ['luke.abbott@woodlanddirect.com', 'jeremy.kline@woodlanddirect.com', 'marty.dorda@woodlanddirect.com']
     },
     Message: {
       Body: {
@@ -22,18 +20,18 @@ exports.sendEmail = (e, ctx) => {
         Charset: 'UTF-8'
       }
     },
-    Source: e.sender_email_address,
+    Source: 'stefan.holodnick@woodlanddirect.com',
     ReplyToAddresses: [
-      e.sender_name + '<' + e.sender_email_address + '>'
+      e.sender_name + '<stefan.holodnick@woodlanddirect.com>'
     ]
   }
 
   // Send the email
   ses.sendEmail(params, function (err, data) {
     if (err) {
-        ctx.fail(err)
+      ctx.fail(err)
     } else {
-        ctx.succeed(data)
+      ctx.succeed(data)
     }
   })
 }
