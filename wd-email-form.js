@@ -6,7 +6,7 @@ exports.sendEmail = (e, ctx) => {
   // Create email parameters
   var params = {
     Destination: {
-      ToAddresses: ['luke.abbott@woodlanddirect.com', 'jeremy.kline@woodlanddirect.com', 'marty.dorda@woodlanddirect.com']
+      ToAddresses: ['jeremy.kline@woodlanddirect.com', 'marty.dorda@woodlanddirect.com', 'ryan.brady@woodlanddirect.com', 'ken.colley@woodlanddirect.com']
     },
     Message: {
       Body: {
