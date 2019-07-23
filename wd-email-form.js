@@ -3,6 +3,8 @@ var ses = new AWS.SES()
 
 // Exports sendEmail functions which sends form information
 exports.sendEmail = (e, ctx) => {
+  // to make sure the payload is captured in logging if there are failures
+  console.log('Payload: ' + JSON.stringify(e))
   // Create email parameters
   var params = {
     Destination: {
